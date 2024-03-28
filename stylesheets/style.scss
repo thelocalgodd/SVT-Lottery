@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$font: 'Montserrat', sans serif;
+$green: #DBFC54;
+$green-deep: #9ABC0E;
+$white: #F1F1E9;
+$black: #292929;
+
+@mixin button {
+    border: none;
+    padding: 10px;
+    border-radius: 16px;
+    background-color: $green;
+    font-weight: 600;
+
+    &:hover {
+        background-color: $green-deep;
+    }
+}
+
+@mixin button-transparent {
+    border: 1px solid white;
+        padding: 10px;
+        border-radius: 16px;
+        background-color: transparent;
+        color: white;
+        font-weight: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+    margin: 0px 30px;
+    
+    ul {
+        display: flex;
+        list-style: none;
+        margin-left: auto;
+
+        li {
+            margin: 10px;
+
+            a {
+                text-decoration: none;
+                color: $black;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+
+/*
+HOMEPAGE Styling
+*/
+
+section#welcome {
+    margin: 0 30px;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 24px;
+    background-color: $black;
+    color: white;
+
+    #welcome-container {
+        display: flex;
+
+        #welcome-text {
+            margin: 20px;
+            width: 50%;
+
+            #welcome-text-header {
+                font-size: 60px;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            #welcome-text-subtext {
+                margin-top: 10px;
+                font-size: 20px;
+            }
+
+            #connect-wallet {
+                @include button;
+                margin-top: 10px
+            }
+
+            #watch-video {
+                @include button-transparent;
+
+                img {
+                    width: 10px;
+                }
+            }
+        }
+
+        #welcome-image {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+section#about {
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    #about-container {
+        display: flex;
+        align-items: center;
+
+        #about-image {
+            width: 50%;
+        }
+
+        #about-text {
+            width: 50%;
+
+            #about-text-header {
+                font-size: 60px;
+                font-weight: 600;  
+            }
+
+            #about-text-subtext {
+                margin-top: 10px;
+                font-size: 20px;
+            }
+
+            #ready-to-play-button {
+                @include button;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+section#stake {
+    padding: 30px;
+    margin: 30px;
+
+    #stake-pretext {    
+        #stake-header-text {
+            font-size: 60px;
+            font-weight: 600;
+        }
+
+        #stake-header-subtext {
+            font-size: 20px;
+        }
+    }
+
+    #stake-container {
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+
+        #left-stake {
+            padding: 20px;
+            width: 44%;
+            border-radius: 24px;
+            background-color: $black;
+            color: white;
+
+            #stake-header-text {
+                font-size: 40px;
+                font-weight: 600;
+            }
+
+            #stake-header-subtext {
+                font-size: 20px;
+            }
+
+            #stake-button {
+                @include button;
+                margin-top: 10px;
+            }
+        }
+
+        #right-withdraw {
+            padding: 20px;
+            width: 44%;
+            border-radius: 24px;
+            background-color: $white;
+
+
+            #withdraw-header-text {
+                font-size: 40px;
+                font-weight: 600;
+            }
+
+            #withdraw-header-subtext {
+                font-size: 20px;
+            }
+
+            #withdraw-button {
+                @include button;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+section#claim {
+    #claim-container {
+        background-color: $black;
+        color: white;
+        padding: 20px;        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #left-image {
+            img {
+                height: 100%;
+            }
+        }
+
+        #right-text {
+            margin: auto;
+            width: 40%;
+
+            #claim-header {
+                font-size: 60px;
+                font-weight: 600;
+
+                span {
+                    color: $green;
+                }
+            }
+
+            #claim-airdrop-button {
+                @include button;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    margin: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+
+        #logo {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        #socials {
+            display: flex;
+            ul {
+                display: flex;
+                list-style-type: none;
+
+                li {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+/*
+AIRDROP PAGE STYLING
+*/
+
+section#airdrop-page {
+    #airdrop-container {
+        padding: 30px;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #airdrop-image {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        #airdrop-text {
+            width: 50%;
+
+            #airdrop-text-header {
+                font-size: 60px;
+                font-weight: 600;
+            }
+
+            #airdrop-text-subtext {
+                margin-top: 10px;
+                font-size: 20px;
+            }
+
+            #claim-airdrop-button {
+                @include button;
+                margin-top: 10px;
+            }
+
+            #learn-more-button {
+                @include button-transparent;
+                margin-top: 10px;
+                border: 1px solid black;
+                color: black;
+            }
+        }
+    }
+}
+
+/*
+LOTTERY / STAKE PAGE STYLING
+*/
+
+section#lottery-page {
+    #lottery-container {
+        padding: 30px;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #lottery-image {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        #lottery-text {
+            width: 40%;
+            margin-right: auto;
+
+            #lottery-text-header {
+                font-size: 60px;
+                font-weight: 600;
+            }
+
+            #lottery-text-subtext {
+                margin-top: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    #lottery-forms {
+        background-color: $black;
+        color: white;
+        padding: 20px 100px;
+
+        #form-header {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+
+        #form-header-subtext {
+            margin-top: 5px;
+            color: $green;
+        }
+
+        #lottery-form {
+            display: flex;
+            
+            form {
+                input {
+                    padding: 10px 0;
+                    margin: 10px 0;
+                    border-radius: 10px;
+                    width: 300px;
+                    border: none;
+                }
+
+                button {
+                    @include button;
+                    margin-top: 10px;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        #see-result, #claim-result {
+            @include button;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    nav {
+        margin: 10px 200px;
+        font-size: 25px;
+    }
+
+    section#welcome {
+        margin: 5px 200px;
+        padding: 50px 100px;
+
+        #welcome-container {
+            display: flex;
+
+            #welcome-text {
+                #welcome-text-header {
+                    font-size: 100px;
+                }
+
+                #welcome-text-subtext {
+                    font-size: 30px;
+                }
+
+                #connect-wallet {
+                    font-size: 20px;
+                    margin: 10px 5px;
+                }
+
+                #watch-video {
+                    font-size: 20px;
+                    margin: 10px 5px;
+                }
+            }
+        }
+
+        #welcome-image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    section#about {
+        margin: 5px 200px;
+        padding: 50px 100px;
+
+        #about-container {
+            #about-image {
+                width: 40%;
+                margin-right: auto;
+                img {
+                    width: 100%;
+                }
+            }
+
+            #about-text {
+                #about-text-header {
+                    font-size: 100px;
+                }
+
+                #about-text-subtext {
+                    font-size: 30px;
+                }
+
+                #ready-to-play-button {
+                    font-size: 20px;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+
+    section#stake {
+        margin: 5px 200px;
+        padding: 50px 100px;
+
+        #stake-pretext {
+            #stake-header-text {
+                font-size: 100px;
+            }
+
+            #stake-header-subtext {
+                font-size: 30px;
+            }
+        }
+
+        #stake-container {
+            #left-stake {
+                padding: 30px;
+                width: 45%;
+
+                #stake-header-text {
+                    font-size: 60px;
+                }
+
+                #stake-header-subtext {
+                    font-size: 30px;
+                }
+
+                #stake-button {
+                    font-size: 20px;
+                    margin: 20px 0;
+                }
+            }
+
+            #right-withdraw {
+                padding: 30px;
+                width: 45%;
+
+                #withdraw-header-text {
+                    font-size: 60px;
+                }
+
+                #withdraw-header-subtext {
+                    font-size: 30px;
+                }
+
+                #withdraw-button {
+                    font-size: 20px;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+
+    section#claim {
+        #claim-container {
+            padding: 30px 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #left-image {
+                img {
+                    height: 100%;
+                }
+            }
+
+            #right-text {
+                #claim-header {
+                    font-size: 100px;
+                }
+
+                #claim-airdrop-button {
+                    font-size: 20px;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+
+    footer {
+        margin: 20px 400px;
+        font-size: 25px;
+
+        #logo {
+            font-size: 50px;
+        }
+
+        #socials {
+            ul {
+                li {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+    section#airdrop-page {
+        #airdrop-container {
+            padding: 50px 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #airdrop-image {
+                width: 40%;
+                img {
+                    width: 100%;
+                }
+            }
+
+            #airdrop-text {
+                width: 40%;
+
+                #airdrop-text-header {
+                    font-size: 100px;
+                }
+
+                #airdrop-text-subtext {
+                    font-size: 30px;
+                }
+
+                #claim-airdrop-button {
+                    font-size: 20px;
+                    margin: 20px 0;
+                }
+
+                #learn-more-button {
+                    font-size: 20px;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+
+    section#lottery-page {
+        #lottery-container {
+            padding: 50px 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #lottery-image {
+                width: 40%;
+                img {
+                    width: 100%;
+                }
+            }
+
+            #lottery-text {
+                width: 40%;
+                margin-right: auto;
+
+                #lottery-text-header {
+                    font-size: 100px;
+                }
+
+                #lottery-text-subtext {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        #lottery-forms {
+            padding: 30px 200px;
+
+            #form-header {
+                font-size: 30px;
+            }
+
+            #form-header-subtext {
+                font-size: 20px;
+            }
+
+            #lottery-form {
+                form {
+                    input {
+                        width: 400px;
+                    }
+
+                    button {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            #see-result, #claim-result {
+                font-size: 20px;
+            }
+        }
+    }
+} 
