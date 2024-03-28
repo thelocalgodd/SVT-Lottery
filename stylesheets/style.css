@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans serif;
-}
+  font-family: "Montserrat", sans serif; }
 
 nav {
   display: flex;
@@ -11,23 +10,18 @@ nav {
   align-items: center;
   padding: 20px;
   font-size: 20px;
-  margin: 0px 30px;
-}
-nav ul {
-  display: flex;
-  list-style: none;
-  margin-left: auto;
-}
-nav ul li {
-  margin: 10px;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #292929;
-}
-nav ul li a:hover {
-  color: #DBFC54;
-}
+  margin: 0px 30px; }
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin-left: auto; }
+    nav ul li {
+      margin: 10px; }
+      nav ul li a {
+        text-decoration: none;
+        color: #292929; }
+        nav ul li a:hover {
+          color: #DBFC54; }
 
 /*
 HOMEPAGE Styling
@@ -38,156 +32,122 @@ section#welcome {
   border: 1px solid black;
   border-radius: 24px;
   background-color: #292929;
-  color: white;
-}
-section#welcome #welcome-container {
-  display: flex;
-}
-section#welcome #welcome-container #welcome-text {
-  margin: 20px;
-  width: 50%;
-}
-section#welcome #welcome-container #welcome-text #welcome-text-header {
-  font-size: 60px;
-}
-section#welcome #welcome-container #welcome-text #welcome-text-header span {
-  font-weight: 600;
-}
-section#welcome #welcome-container #welcome-text #welcome-text-subtext {
-  margin-top: 10px;
-  font-size: 20px;
-}
-section#welcome #welcome-container #welcome-text #connect-wallet {
-  border: none;
-  padding: 10px;
-  border-radius: 16px;
-  background-color: #DBFC54;
-  font-weight: 600;
-  margin-top: 10px;
-}
-section#welcome #welcome-container #welcome-text #connect-wallet:hover {
-  background-color: #9ABC0E;
-}
-section#welcome #welcome-container #welcome-text #watch-video {
-  border: 1px solid white;
-  padding: 10px;
-  border-radius: 16px;
-  background-color: transparent;
-  color: white;
-  font-weight: 600;
-}
-section#welcome #welcome-container #welcome-text #watch-video img {
-  width: 10px;
-}
-section#welcome #welcome-container #welcome-image {
-  width: 50%;
-}
-section#welcome #welcome-container #welcome-image img {
-  width: 100%;
-}
+  color: white; }
+  section#welcome #welcome-container {
+    display: flex; }
+    section#welcome #welcome-container #welcome-text {
+      margin: 20px;
+      width: 50%; }
+      section#welcome #welcome-container #welcome-text #welcome-text-header {
+        font-size: 60px; }
+        section#welcome #welcome-container #welcome-text #welcome-text-header span {
+          font-weight: 600; }
+      section#welcome #welcome-container #welcome-text #welcome-text-subtext {
+        margin-top: 10px;
+        font-size: 20px; }
+      section#welcome #welcome-container #welcome-text #connect-wallet {
+        border: none;
+        padding: 10px;
+        border-radius: 16px;
+        background-color: #DBFC54;
+        font-weight: 600;
+        margin-top: 10px; }
+        section#welcome #welcome-container #welcome-text #connect-wallet:hover {
+          background-color: #9ABC0E; }
+      section#welcome #welcome-container #welcome-text #watch-video {
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 16px;
+        background-color: transparent;
+        color: white;
+        font-weight: 600; }
+        section#welcome #welcome-container #welcome-text #watch-video img {
+          width: 10px; }
+    section#welcome #welcome-container #welcome-image {
+      width: 50%; }
+      section#welcome #welcome-container #welcome-image img {
+        width: 100%; }
 
 section#about {
   margin: 20px;
   padding: 30px;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-section#about #about-container {
-  display: flex;
-  align-items: center;
-}
-section#about #about-container #about-image {
-  width: 50%;
-}
-section#about #about-container #about-text {
-  width: 50%;
-}
-section#about #about-container #about-text #about-text-header {
-  font-size: 60px;
-  font-weight: 600;
-}
-section#about #about-container #about-text #about-text-subtext {
-  margin-top: 10px;
-  font-size: 20px;
-}
-section#about #about-container #about-text #ready-to-play-button {
-  border: none;
-  padding: 10px;
-  border-radius: 16px;
-  background-color: #DBFC54;
-  font-weight: 600;
-  margin-top: 10px;
-}
-section#about #about-container #about-text #ready-to-play-button:hover {
-  background-color: #9ABC0E;
-}
+  justify-content: center; }
+  section#about #about-container {
+    display: flex;
+    align-items: center; }
+    section#about #about-container #about-image {
+      width: 50%; }
+    section#about #about-container #about-text {
+      width: 50%; }
+      section#about #about-container #about-text #about-text-header {
+        font-size: 60px;
+        font-weight: 600; }
+      section#about #about-container #about-text #about-text-subtext {
+        margin-top: 10px;
+        font-size: 20px; }
+      section#about #about-container #about-text #ready-to-play-button {
+        border: none;
+        padding: 10px;
+        border-radius: 16px;
+        background-color: #DBFC54;
+        font-weight: 600;
+        margin-top: 10px; }
+        section#about #about-container #about-text #ready-to-play-button:hover {
+          background-color: #9ABC0E; }
 
 section#stake {
   padding: 30px;
-  margin: 30px;
-}
-section#stake #stake-pretext #stake-header-text {
-  font-size: 60px;
-  font-weight: 600;
-}
-section#stake #stake-pretext #stake-header-subtext {
-  font-size: 20px;
-}
-section#stake #stake-container {
-  display: flex;
-  margin-top: 20px;
-  justify-content: space-between;
-}
-section#stake #stake-container #left-stake {
-  padding: 20px;
-  width: 44%;
-  border-radius: 24px;
-  background-color: #292929;
-  color: white;
-}
-section#stake #stake-container #left-stake #stake-header-text {
-  font-size: 40px;
-  font-weight: 600;
-}
-section#stake #stake-container #left-stake #stake-header-subtext {
-  font-size: 20px;
-}
-section#stake #stake-container #left-stake #stake-button {
-  border: none;
-  padding: 10px;
-  border-radius: 16px;
-  background-color: #DBFC54;
-  font-weight: 600;
-  margin-top: 10px;
-}
-section#stake #stake-container #left-stake #stake-button:hover {
-  background-color: #9ABC0E;
-}
-section#stake #stake-container #right-withdraw {
-  padding: 20px;
-  width: 44%;
-  border-radius: 24px;
-  background-color: #F1F1E9;
-}
-section#stake #stake-container #right-withdraw #withdraw-header-text {
-  font-size: 40px;
-  font-weight: 600;
-}
-section#stake #stake-container #right-withdraw #withdraw-header-subtext {
-  font-size: 20px;
-}
-section#stake #stake-container #right-withdraw #withdraw-button {
-  border: none;
-  padding: 10px;
-  border-radius: 16px;
-  background-color: #DBFC54;
-  font-weight: 600;
-  margin-top: 10px;
-}
-section#stake #stake-container #right-withdraw #withdraw-button:hover {
-  background-color: #9ABC0E;
-}
+  margin: 30px; }
+  section#stake #stake-pretext #stake-header-text {
+    font-size: 60px;
+    font-weight: 600; }
+  section#stake #stake-pretext #stake-header-subtext {
+    font-size: 20px; }
+  section#stake #stake-container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between; }
+    section#stake #stake-container #left-stake {
+      padding: 20px;
+      width: 44%;
+      border-radius: 24px;
+      background-color: #292929;
+      color: white; }
+      section#stake #stake-container #left-stake #stake-header-text {
+        font-size: 40px;
+        font-weight: 600; }
+      section#stake #stake-container #left-stake #stake-header-subtext {
+        font-size: 20px; }
+      section#stake #stake-container #left-stake #stake-button {
+        border: none;
+        padding: 10px;
+        border-radius: 16px;
+        background-color: #DBFC54;
+        font-weight: 600;
+        margin-top: 10px; }
+        section#stake #stake-container #left-stake #stake-button:hover {
+          background-color: #9ABC0E; }
+    section#stake #stake-container #right-withdraw {
+      padding: 20px;
+      width: 44%;
+      border-radius: 24px;
+      background-color: #F1F1E9; }
+      section#stake #stake-container #right-withdraw #withdraw-header-text {
+        font-size: 40px;
+        font-weight: 600; }
+      section#stake #stake-container #right-withdraw #withdraw-header-subtext {
+        font-size: 20px; }
+      section#stake #stake-container #right-withdraw #withdraw-button {
+        border: none;
+        padding: 10px;
+        border-radius: 16px;
+        background-color: #DBFC54;
+        font-weight: 600;
+        margin-top: 10px; }
+        section#stake #stake-container #right-withdraw #withdraw-button:hover {
+          background-color: #9ABC0E; }
 
 section#claim #claim-container {
   background-color: #292929;
@@ -195,54 +155,50 @@ section#claim #claim-container {
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-section#claim #claim-container #left-image img {
-  height: 100%;
-}
-section#claim #claim-container #right-text {
-  margin: auto;
-  width: 40%;
-}
-section#claim #claim-container #right-text #claim-header {
-  font-size: 60px;
-  font-weight: 600;
-}
-section#claim #claim-container #right-text #claim-header span {
-  color: #DBFC54;
-}
-section#claim #claim-container #right-text #claim-airdrop-button {
-  border: none;
-  padding: 10px;
-  border-radius: 16px;
-  background-color: #DBFC54;
-  font-weight: 600;
-  margin-top: 10px;
-}
-section#claim #claim-container #right-text #claim-airdrop-button:hover {
-  background-color: #9ABC0E;
-}
+  align-items: center; }
+  section#claim #claim-container #left-image img {
+    height: 100%; }
+  section#claim #claim-container #right-text {
+    margin: auto;
+    width: 40%; }
+    section#claim #claim-container #right-text #claim-header {
+      font-size: 60px;
+      font-weight: 600; }
+      section#claim #claim-container #right-text #claim-header span {
+        color: #DBFC54; }
+    section#claim #claim-container #right-text #claim-airdrop-button {
+      border: none;
+      padding: 10px;
+      border-radius: 16px;
+      background-color: #DBFC54;
+      font-weight: 600;
+      margin-top: 10px; }
+      section#claim #claim-container #right-text #claim-airdrop-button:hover {
+        background-color: #9ABC0E; }
 
 footer {
   display: flex;
   margin: 10px 100px;
   display: flex;
-  justify-content: space-between;
-}
-footer #logo {
-  font-size: 40px;
-  font-weight: 600;
-}
-footer #socials {
-  display: flex;
-}
-footer #socials ul {
-  display: flex;
-  list-style-type: none;
-}
-footer #socials ul li {
-  margin: 0 5px;
-}
+  justify-content: space-between; }
+  footer a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black; }
+    footer a:hover {
+      color: #9ABC0E; }
+  footer #logo {
+    font-size: 40px;
+    font-weight: 600; }
+  footer #socials {
+    display: flex;
+    align-items: center; }
+    footer #socials ul {
+      display: flex;
+      align-items: center;
+      list-style-type: none; }
+      footer #socials ul li {
+        margin: 0 5px; }
 
 /*
 AIRDROP PAGE STYLING
@@ -252,47 +208,38 @@ section#airdrop-page #airdrop-container {
   margin: 30px;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-section#airdrop-page #airdrop-container #airdrop-image {
-  width: 50%;
-}
-section#airdrop-page #airdrop-container #airdrop-image img {
-  width: 100%;
-}
-section#airdrop-page #airdrop-container #airdrop-text {
-  width: 50%;
-}
-section#airdrop-page #airdrop-container #airdrop-text #airdrop-text-header {
-  font-size: 60px;
-  font-weight: 600;
-}
-section#airdrop-page #airdrop-container #airdrop-text #airdrop-text-subtext {
-  margin-top: 10px;
-  font-size: 20px;
-}
-section#airdrop-page #airdrop-container #airdrop-text #claim-airdrop-button {
-  border: none;
-  padding: 10px;
-  border-radius: 16px;
-  background-color: #DBFC54;
-  font-weight: 600;
-  margin-top: 10px;
-}
-section#airdrop-page #airdrop-container #airdrop-text #claim-airdrop-button:hover {
-  background-color: #9ABC0E;
-}
-section#airdrop-page #airdrop-container #airdrop-text #learn-more-button {
-  border: 1px solid white;
-  padding: 10px;
-  border-radius: 16px;
-  background-color: transparent;
-  color: white;
-  font-weight: 600;
-  margin-top: 10px;
-  border: 1px solid black;
-  color: black;
-}
+  align-items: center; }
+  section#airdrop-page #airdrop-container #airdrop-image {
+    width: 50%; }
+    section#airdrop-page #airdrop-container #airdrop-image img {
+      width: 100%; }
+  section#airdrop-page #airdrop-container #airdrop-text {
+    width: 50%; }
+    section#airdrop-page #airdrop-container #airdrop-text #airdrop-text-header {
+      font-size: 60px;
+      font-weight: 600; }
+    section#airdrop-page #airdrop-container #airdrop-text #airdrop-text-subtext {
+      margin-top: 10px;
+      font-size: 20px; }
+    section#airdrop-page #airdrop-container #airdrop-text #claim-airdrop-button {
+      border: none;
+      padding: 10px;
+      border-radius: 16px;
+      background-color: #DBFC54;
+      font-weight: 600;
+      margin-top: 10px; }
+      section#airdrop-page #airdrop-container #airdrop-text #claim-airdrop-button:hover {
+        background-color: #9ABC0E; }
+    section#airdrop-page #airdrop-container #airdrop-text #learn-more-button {
+      border: 1px solid white;
+      padding: 10px;
+      border-radius: 16px;
+      background-color: transparent;
+      color: white;
+      font-weight: 600;
+      margin-top: 10px;
+      border: 1px solid black;
+      color: black; }
 
 /*
 LOTTERY / STAKE PAGE STYLING
@@ -302,257 +249,196 @@ section#lottery-page #lottery-container {
   margin: 30px;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-section#lottery-page #lottery-container #lottery-image {
-  width: 50%;
-}
-section#lottery-page #lottery-container #lottery-image img {
-  width: 100%;
-}
-section#lottery-page #lottery-container #lottery-text {
-  width: 40%;
-  margin-right: auto;
-}
-section#lottery-page #lottery-container #lottery-text #lottery-text-header {
-  font-size: 60px;
-  font-weight: 600;
-}
-section#lottery-page #lottery-container #lottery-text #lottery-text-subtext {
-  margin-top: 10px;
-  font-size: 20px;
-}
+  align-items: center; }
+  section#lottery-page #lottery-container #lottery-image {
+    width: 50%; }
+    section#lottery-page #lottery-container #lottery-image img {
+      width: 100%; }
+  section#lottery-page #lottery-container #lottery-text {
+    width: 40%;
+    margin-right: auto; }
+    section#lottery-page #lottery-container #lottery-text #lottery-text-header {
+      font-size: 60px;
+      font-weight: 600; }
+    section#lottery-page #lottery-container #lottery-text #lottery-text-subtext {
+      margin-top: 10px;
+      font-size: 20px; }
 section#lottery-page #lottery-forms {
   background-color: #292929;
   color: white;
-  padding: 20px 100px;
-}
-section#lottery-page #lottery-forms #form-header {
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 30px;
-}
-section#lottery-page #lottery-forms #form-header-subtext {
-  margin-top: 5px;
-  color: #DBFC54;
-}
-section#lottery-page #lottery-forms #lottery-form {
-  display: flex;
-}
-section#lottery-page #lottery-forms #lottery-form form input {
-  padding: 10px 0;
-  margin: 10px 0;
-  border-radius: 10px;
-  width: 300px;
-  border: none;
-}
-section#lottery-page #lottery-forms #lottery-form form button {
-  border: none;
-  padding: 10px;
-  border-radius: 16px;
-  background-color: #DBFC54;
-  font-weight: 600;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-section#lottery-page #lottery-forms #lottery-form form button:hover {
-  background-color: #9ABC0E;
-}
-section#lottery-page #lottery-forms #see-result, section#lottery-page #lottery-forms #claim-result {
-  border: none;
-  padding: 10px;
-  border-radius: 16px;
-  background-color: #DBFC54;
-  font-weight: 600;
-  margin-top: 10px;
-}
-section#lottery-page #lottery-forms #see-result:hover, section#lottery-page #lottery-forms #claim-result:hover {
-  background-color: #9ABC0E;
-}
+  padding: 20px 100px; }
+  section#lottery-page #lottery-forms #form-header {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px; }
+  section#lottery-page #lottery-forms #form-header-subtext {
+    margin-top: 5px;
+    color: #DBFC54; }
+  section#lottery-page #lottery-forms #lottery-form {
+    display: flex; }
+    section#lottery-page #lottery-forms #lottery-form form input {
+      padding: 10px 0;
+      margin: 10px 0;
+      border-radius: 10px;
+      width: 300px;
+      border: none; }
+    section#lottery-page #lottery-forms #lottery-form form button {
+      border: none;
+      padding: 10px;
+      border-radius: 16px;
+      background-color: #DBFC54;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-left: 10px; }
+      section#lottery-page #lottery-forms #lottery-form form button:hover {
+        background-color: #9ABC0E; }
+  section#lottery-page #lottery-forms #see-result, section#lottery-page #lottery-forms #claim-result {
+    border: none;
+    padding: 10px;
+    border-radius: 16px;
+    background-color: #DBFC54;
+    font-weight: 600;
+    margin-top: 10px; }
+    section#lottery-page #lottery-forms #see-result:hover, section#lottery-page #lottery-forms #claim-result:hover {
+      background-color: #9ABC0E; }
 
 @media screen and (min-width: 1000px) {
   nav {
     margin: 10px 200px;
-    font-size: 25px;
-  }
+    font-size: 25px; }
+
   section#welcome {
     margin: 5px 200px;
-    padding: 50px 100px;
-  }
-  section#welcome #welcome-container {
-    display: flex;
-  }
-  section#welcome #welcome-container #welcome-text #welcome-text-header {
-    font-size: 100px;
-  }
-  section#welcome #welcome-container #welcome-text #welcome-text-subtext {
-    font-size: 30px;
-  }
-  section#welcome #welcome-container #welcome-text #connect-wallet {
-    font-size: 20px;
-    margin: 10px 5px;
-  }
-  section#welcome #welcome-container #welcome-text #watch-video {
-    font-size: 20px;
-    margin: 10px 5px;
-  }
-  section#welcome #welcome-image img {
-    width: 100%;
-  }
+    padding: 50px 100px; }
+    section#welcome #welcome-container {
+      display: flex; }
+      section#welcome #welcome-container #welcome-text #welcome-text-header {
+        font-size: 100px; }
+      section#welcome #welcome-container #welcome-text #welcome-text-subtext {
+        font-size: 30px; }
+      section#welcome #welcome-container #welcome-text #connect-wallet {
+        font-size: 20px;
+        margin: 10px 5px; }
+      section#welcome #welcome-container #welcome-text #watch-video {
+        font-size: 20px;
+        margin: 10px 5px; }
+    section#welcome #welcome-image img {
+      width: 100%; }
+
   section#about {
     margin: 5px 200px;
-    padding: 50px 100px;
-  }
-  section#about #about-container #about-image {
-    width: 40%;
-    margin-right: auto;
-  }
-  section#about #about-container #about-image img {
-    width: 100%;
-  }
-  section#about #about-container #about-text #about-text-header {
-    font-size: 100px;
-  }
-  section#about #about-container #about-text #about-text-subtext {
-    font-size: 30px;
-  }
-  section#about #about-container #about-text #ready-to-play-button {
-    font-size: 20px;
-    margin: 20px 0;
-  }
+    padding: 50px 100px; }
+    section#about #about-container #about-image {
+      width: 40%;
+      margin-right: auto; }
+      section#about #about-container #about-image img {
+        width: 100%; }
+    section#about #about-container #about-text #about-text-header {
+      font-size: 100px; }
+    section#about #about-container #about-text #about-text-subtext {
+      font-size: 30px; }
+    section#about #about-container #about-text #ready-to-play-button {
+      font-size: 20px;
+      margin: 20px 0; }
+
   section#stake {
     margin: 5px 200px;
-    padding: 50px 100px;
-  }
-  section#stake #stake-pretext #stake-header-text {
-    font-size: 100px;
-  }
-  section#stake #stake-pretext #stake-header-subtext {
-    font-size: 30px;
-  }
-  section#stake #stake-container #left-stake {
-    padding: 30px;
-    width: 45%;
-  }
-  section#stake #stake-container #left-stake #stake-header-text {
-    font-size: 60px;
-  }
-  section#stake #stake-container #left-stake #stake-header-subtext {
-    font-size: 30px;
-  }
-  section#stake #stake-container #left-stake #stake-button {
-    font-size: 20px;
-    margin: 20px 0;
-  }
-  section#stake #stake-container #right-withdraw {
-    padding: 30px;
-    width: 45%;
-  }
-  section#stake #stake-container #right-withdraw #withdraw-header-text {
-    font-size: 60px;
-  }
-  section#stake #stake-container #right-withdraw #withdraw-header-subtext {
-    font-size: 30px;
-  }
-  section#stake #stake-container #right-withdraw #withdraw-button {
-    font-size: 20px;
-    margin: 20px 0;
-  }
+    padding: 50px 100px; }
+    section#stake #stake-pretext #stake-header-text {
+      font-size: 100px; }
+    section#stake #stake-pretext #stake-header-subtext {
+      font-size: 30px; }
+    section#stake #stake-container #left-stake {
+      padding: 30px;
+      width: 45%; }
+      section#stake #stake-container #left-stake #stake-header-text {
+        font-size: 60px; }
+      section#stake #stake-container #left-stake #stake-header-subtext {
+        font-size: 30px; }
+      section#stake #stake-container #left-stake #stake-button {
+        font-size: 20px;
+        margin: 20px 0; }
+    section#stake #stake-container #right-withdraw {
+      padding: 30px;
+      width: 45%; }
+      section#stake #stake-container #right-withdraw #withdraw-header-text {
+        font-size: 60px; }
+      section#stake #stake-container #right-withdraw #withdraw-header-subtext {
+        font-size: 30px; }
+      section#stake #stake-container #right-withdraw #withdraw-button {
+        font-size: 20px;
+        margin: 20px 0; }
+
   section#claim #claim-container {
     padding: 30px 200px;
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-  section#claim #claim-container #left-image img {
-    height: 100%;
-  }
-  section#claim #claim-container #right-text #claim-header {
-    font-size: 100px;
-  }
-  section#claim #claim-container #right-text #claim-airdrop-button {
-    font-size: 20px;
-    margin: 20px 0;
-  }
+    align-items: center; }
+    section#claim #claim-container #left-image img {
+      height: 100%; }
+    section#claim #claim-container #right-text #claim-header {
+      font-size: 100px; }
+    section#claim #claim-container #right-text #claim-airdrop-button {
+      font-size: 20px;
+      margin: 20px 0; }
+
   footer {
     margin: 20px 400px;
-    font-size: 25px;
-  }
-  footer #logo {
-    font-size: 50px;
-  }
-  footer #socials ul li {
-    margin: 0 10px;
-  }
+    font-size: 25px; }
+    footer #logo {
+      font-size: 50px; }
+    footer #socials ul li {
+      margin: 0 10px; }
+
   section#airdrop-page #airdrop-container {
     padding: 50px 200px;
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-  section#airdrop-page #airdrop-container #airdrop-image {
-    width: 40%;
-  }
-  section#airdrop-page #airdrop-container #airdrop-image img {
-    width: 100%;
-  }
-  section#airdrop-page #airdrop-container #airdrop-text {
-    width: 40%;
-  }
-  section#airdrop-page #airdrop-container #airdrop-text #airdrop-text-header {
-    font-size: 100px;
-  }
-  section#airdrop-page #airdrop-container #airdrop-text #airdrop-text-subtext {
-    font-size: 30px;
-  }
-  section#airdrop-page #airdrop-container #airdrop-text #claim-airdrop-button {
-    font-size: 20px;
-    margin: 20px 0;
-  }
-  section#airdrop-page #airdrop-container #airdrop-text #learn-more-button {
-    font-size: 20px;
-    margin: 20px 0;
-  }
+    align-items: center; }
+    section#airdrop-page #airdrop-container #airdrop-image {
+      width: 40%; }
+      section#airdrop-page #airdrop-container #airdrop-image img {
+        width: 100%; }
+    section#airdrop-page #airdrop-container #airdrop-text {
+      width: 40%; }
+      section#airdrop-page #airdrop-container #airdrop-text #airdrop-text-header {
+        font-size: 100px; }
+      section#airdrop-page #airdrop-container #airdrop-text #airdrop-text-subtext {
+        font-size: 30px; }
+      section#airdrop-page #airdrop-container #airdrop-text #claim-airdrop-button {
+        font-size: 20px;
+        margin: 20px 0; }
+      section#airdrop-page #airdrop-container #airdrop-text #learn-more-button {
+        font-size: 20px;
+        margin: 20px 0; }
+
   section#lottery-page #lottery-container {
     padding: 50px 400px;
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-  section#lottery-page #lottery-container #lottery-image {
-    width: 40%;
-  }
-  section#lottery-page #lottery-container #lottery-image img {
-    width: 100%;
-  }
-  section#lottery-page #lottery-container #lottery-text {
-    width: 40%;
-    margin-right: auto;
-  }
-  section#lottery-page #lottery-container #lottery-text #lottery-text-header {
-    font-size: 100px;
-  }
-  section#lottery-page #lottery-container #lottery-text #lottery-text-subtext {
-    font-size: 30px;
-  }
+    align-items: center; }
+    section#lottery-page #lottery-container #lottery-image {
+      width: 40%; }
+      section#lottery-page #lottery-container #lottery-image img {
+        width: 100%; }
+    section#lottery-page #lottery-container #lottery-text {
+      width: 40%;
+      margin-right: auto; }
+      section#lottery-page #lottery-container #lottery-text #lottery-text-header {
+        font-size: 100px; }
+      section#lottery-page #lottery-container #lottery-text #lottery-text-subtext {
+        font-size: 30px; }
   section#lottery-page #lottery-forms {
-    padding: 30px 200px;
-  }
-  section#lottery-page #lottery-forms #form-header {
-    font-size: 30px;
-  }
-  section#lottery-page #lottery-forms #form-header-subtext {
-    font-size: 20px;
-  }
-  section#lottery-page #lottery-forms #lottery-form form input {
-    width: 400px;
-  }
-  section#lottery-page #lottery-forms #lottery-form form button {
-    font-size: 20px;
-  }
-  section#lottery-page #lottery-forms #see-result, section#lottery-page #lottery-forms #claim-result {
-    font-size: 20px;
-  }
-}
+    padding: 30px 200px; }
+    section#lottery-page #lottery-forms #form-header {
+      font-size: 30px; }
+    section#lottery-page #lottery-forms #form-header-subtext {
+      font-size: 20px; }
+    section#lottery-page #lottery-forms #lottery-form form input {
+      width: 400px; }
+    section#lottery-page #lottery-forms #lottery-form form button {
+      font-size: 20px; }
+    section#lottery-page #lottery-forms #see-result, section#lottery-page #lottery-forms #claim-result {
+      font-size: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

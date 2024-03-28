@@ -261,6 +261,16 @@ footer {
     display: flex;
     justify-content: space-between;
 
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        color: black;
+
+        &:hover {
+            color: $green-deep;
+        }
+    }
+
         #logo {
             font-size: 40px;
             font-weight: 600;
@@ -268,8 +278,11 @@ footer {
 
         #socials {
             display: flex;
+            align-items: center;
+                        
             ul {
                 display: flex;
+                align-items: center;
                 list-style-type: none;
 
                 li {
