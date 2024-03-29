@@ -31,12 +31,18 @@ $black: #292929;
     margin: 0;
     padding: 0;
     font-family: $font;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 20px;
     font-size: 20px;
     margin: 0px 30px;
@@ -68,7 +74,6 @@ HOMEPAGE Styling
 section#welcome {
     margin: 0 30px;
     padding: 30px;
-    border: 1px solid black;
     border-radius: 24px;
     background-color: $black;
     color: white;
@@ -419,8 +424,7 @@ section#lottery-page {
     }
 }
 
-
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1025px) {
     nav {
         margin: 10px 200px;
         font-size: 25px;
@@ -682,3 +686,240 @@ section#lottery-page {
         }
     }
 } 
+
+@media screen and (min-width: 370px) {
+    @media screen and (max-width: 800px) {
+        nav {
+            text-align: center;
+            padding: 10px;
+            font-size: 15px;
+            display: flex;
+            flex-direction: column;
+
+            #logo {
+                font-size: 20px;
+                margin: 5px 0;
+                font-weight: 600;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                li {
+                    margin: 5px;
+                    font-weight: 500;
+                    border-radius: 10px;
+                    padding: 2px;
+                    align-items: center;
+                }
+            }
+        }
+
+        section#welcome {
+            #welcome-container {
+                flex-direction: column-reverse;
+                align-items: center;
+
+                #welcome-text {
+                    width: 100%;
+                    
+                    #welcome-text-header {
+                        font-size: 40px;
+                    }
+                }
+
+                #welcome-image {
+                    width: 100%;
+                }
+            }
+        }
+
+        section#about {
+            #about-container {
+                flex-direction: column;
+                margin: 10px;
+
+                #about-image {
+                    width: 100%;
+
+                    img {
+                        width: 90%;
+                    }
+                }
+
+                #about-text {
+                    width: 100%;
+
+                    #about-text-header {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+
+        section#stake {
+            #stake-pretext {
+                #stake-header-text {
+                    font-size: 40px;
+                }
+            }
+
+            #stake-container {
+                flex-direction: column;
+                margin: 10px 20px 10px 0;
+
+                #left-stake {
+                    width: 100%;
+                    margin: 10px 0;
+
+                    #stake-header-text {
+                        font-size: 30px;
+                    }
+                }
+
+                #right-withdraw {
+                    width: 100%;
+
+                    #withdraw-header-text {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+
+        section#claim {
+            #claim-container {
+                flex-direction: column;
+
+                #left-image {
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                #right-text {
+                    width: 100%;
+                    text-align: center;
+
+                    #claim-header {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+
+        footer {
+            font-size: 18px;
+            margin: 10px auto;
+            padding: 5px 20px;
+
+            #logo {
+                font-size: 18px;
+                margin-left: 20px;
+            }
+
+            #socials {
+                ul {
+                    li {
+                        margin: 0 5px;
+
+                        a {
+                            img {
+                                width: 20px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        section#airdrop-page {
+            #airdrop-container {
+                flex-direction: column-reverse;
+                margin-top: 0;
+
+                #airdrop-image {
+                    margin-top: 0;
+                    width: 100%;
+                    align-items: center;
+
+                    img {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                #airdrop-text {
+                    width: 100%;
+                    margin: 5px 50px;
+
+                    #airdrop-text-header {
+                        text-align: center;
+                    }
+
+                    #airdrop-text-header {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+
+        section#lottery-page {
+            #lottery-container {
+                flex-direction: column-reverse;
+                margin-top: 0;
+
+                #lottery-image {
+                    margin-top: 0;
+                    width: 100%;
+                    align-items: center;
+
+                    img {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                #lottery-text {
+                    width: 100%;
+                    margin: 5px 50px;
+
+                    #lottery-text-header {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            #lottery-forms {
+                padding: 20px 25px;
+
+                #form-header {
+                    font-size: 20px;
+                }
+
+                #form-header-subtext {
+                    font-size: 15px;
+                }
+
+                #lottery-form {
+                    form {
+                        input {
+                            width: 200px;
+                        }
+
+                        button {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                #see-result, #claim-result {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
