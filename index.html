@@ -1,168 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
     <title>SVT Lottery</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div id="logo">
-            <p id="logo">SVT Lottery</p>
-        </div>
-
+      <div id="logo">
+        <a href="javascript:void(0)" id="openButton" onclick="openNav()">
+            &#9776;
+        </a>
+        <p id="logo">SVT Lottery</p>
+      </div>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
         <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="/pages/airdrop.html">Airdrop</a>
-            </li>
-            <li>
-                <a href="/pages/lottery.html">Play Lottery</a>
-            </li>
-            <li>
-                <a href="/pages/stake.html">Stake</a>
-            </li>
-            <li>
-                <a href="https://sepolia.etherscan.io/address/0x6217b9Da34FDb8441c599E7BaC103fef28e529f3#code">
-                    Smart Connect
-                </a>
-            </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/pages/airdrop.html">Airdrop</a></li>
+          <li><a href="/pages/lottery.html">Play Lottery</a></li>
+          <li><a href="/pages/stake.html">Stake</a></li>
+          <li>
+            <a href="https://sepolia.etherscan.io/address/0x6217b9Da34FDb8441c599E7BaC103fef28e529f3#code">
+                Smart Connect
+            </a>
+          </li>
         </ul>
+      </div>
+      <div id="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/pages/airdrop.html">Airdrop</a></li>
+          <li><a href="/pages/lottery.html">Play Lottery</a></li>
+          <li><a href="/pages/stake.html">Stake</a></li>
+          <li>
+            <a
+              href="https://sepolia.etherscan.io/address/0x6217b9Da34FDb8441c599E7BaC103fef28e529f3#code"
+              >Smart Connect</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <section id="welcome">
-        <div id="welcome-container">
-            <div id="welcome-text">
-                <p id="welcome-text-header">
-                    Welcome to <span>SVT Lottery</span>
-                </p>
-                <p id="welcome-text-subtext">
-                    Feeling Lucky? Claim your airdrop and participate in one of the lotteries.
-                </p>
+      <div id="welcome-container">
+        <div id="welcome-text">
+          <p id="welcome-text-header">Welcome to <span>SVT Lottery</span></p>
+          <p id="welcome-text-subtext">
+            Feeling Lucky? Claim your airdrop and participate in one of the
+            lotteries.
+          </p>
 
-                <button id="connect-wallet">
-                    Connect Wallet
-                </button>
+          <button id="connect-wallet">Connect Wallet</button>
 
-                <button id="watch-video">
-                    <img src="assets/play-button.svg" alt="play button">
-                    Watch Video
-                </button>
-            </div>
-
-            <div id="welcome-image">
-                <img src="assets/box-welcome.svg" alt="">
-            </div>
+          <button id="watch-video">
+            <img src="assets/play-button.svg" alt="play button" />
+            Watch Video
+          </button>
         </div>
+
+        <div id="welcome-image">
+          <img src="assets/box-welcome.svg" alt="" />
+        </div>
+      </div>
     </section>
 
     <section id="about">
-        <div id="about-container">
-            <div id="about-image">
-                <img src="assets/coin.svg" alt="">
-            </div>
-            
-            <div id="about-text">
-                <p id="about-text-header">
-                    About<br>SVT Lottery
-                </p>
-                <p id="about-text-subtext">
-                    SVT Lottery uses $SLT Tokens for all interactions. 
-                    You stake using $SLT, withdraw in $SLT, Play a lottery 
-                    using $SLT, and win $SLT from lotteries. You can win 
-                    x10 of your entry fee in $SLT Tokens!!!
-                </p>
-
-                <button id="ready-to-play-button">
-                    Ready To Play
-                </button>
-            </div>
+      <div id="about-container">
+        <div id="about-image">
+          <img src="assets/coin.svg" alt="" />
         </div>
+
+        <div id="about-text">
+          <p id="about-text-header">About<br />SVT Lottery</p>
+          <p id="about-text-subtext">
+            SVT Lottery uses $SLT Tokens for all interactions. You stake using
+            $SLT, withdraw in $SLT, Play a lottery using $SLT, and win $SLT from
+            lotteries. You can win x10 of your entry fee in $SLT Tokens!!!
+          </p>
+
+          <button id="ready-to-play-button">Ready To Play</button>
+        </div>
+      </div>
     </section>
 
     <section id="stake">
-        <div id="stake-pretext">
-            <p id="stake-header-text">
-                Stake
-            </p>
-            <p id="stake-header-subtext">
-                Stake $SLT in SVTL and earn. You can only stake once per wallet.
-            </p>
+      <div id="stake-pretext">
+        <p id="stake-header-text">Stake</p>
+        <p id="stake-header-subtext">
+          Stake $SLT in SVTL and earn. You can only stake once per wallet.
+        </p>
+      </div>
+
+      <div id="stake-container">
+        <div id="left-stake">
+          <p id="stake-header-text">Stake</p>
+          <p id="stake-header-subtext">
+            Stake $SLT in SVTL and earn. Make sure to approve $SLT first.
+          </p>
+
+          <button id="stake-button">Stake</button>
         </div>
 
-        <div id="stake-container">
-            <div id="left-stake">
-                <p id="stake-header-text">
-                    Stake
-                </p>
-                <p id="stake-header-subtext">
-                    Stake $SLT in SVTL and earn. Make sure to approve $SLT first.
-                </p>
+        <div id="right-withdraw">
+          <p id="withdraw-header-text">Withdraw</p>
+          <p id="withdraw-header-subtext">
+            Get back your stake with your earnings.
+          </p>
 
-                <button id="stake-button">
-                    Stake
-                </button>
-            </div>
-
-            <div id="right-withdraw">
-                <p id="withdraw-header-text">
-                    Withdraw
-                </p>
-                <p id="withdraw-header-subtext">
-                    Get back your stake with your earnings.
-                </p>
-
-                <button id="withdraw-button">
-                    Withdraw
-                </button>
-            </div>
-        </div>  
+          <button id="withdraw-button">Withdraw</button>
+        </div>
+      </div>
     </section>
 
     <section id="claim">
-        <div id="claim-container">
-            <div id="left-image">
-                <img src="assets/box-claim.svg" alt="">
-            </div>
-            <div id="right-text">
-                <p id="claim-header">
-                    Claim <span>$SLT</span>
-                </p>
-
-                <button id="claim-airdrop-button">
-                    Claim Airdrop
-                </button>
-            </div>
+      <div id="claim-container">
+        <div id="left-image">
+          <img src="assets/box-claim.svg" alt="" />
         </div>
+        <div id="right-text">
+          <p id="claim-header">Claim <span>$SLT</span></p>
+
+          <button id="claim-airdrop-button">Claim Airdrop</button>
+        </div>
+      </div>
     </section>
 
     <footer>
-            <p id="logo">
-                SVT Lottery
-            </p>
+      <p id="logo">SVT Lottery</p>
 
-            <div id="socials">
-                <ul>
-                    <li>
-                        <a href="https://t.me/SVTLottery">
-                            <img src="assets/tg.svg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/SeveighTech">
-                            <img src="assets/x.svg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://seveightech.notion.site/SVTLottery-d7b32197aa0943be93e15436eb51b6b4">
-                            Whitepaper
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <div id="socials">
+        <ul>
+          <li>
+            <a href="https://t.me/SVTLottery">
+              <img src="assets/tg.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/SeveighTech">
+              <img src="assets/x.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://seveightech.notion.site/SVTLottery-d7b32197aa0943be93e15436eb51b6b4"
+            >
+              Whitepaper
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
-</body>
+
+    <script src="scripts/script.js"></script>
+  </body>
 </html>

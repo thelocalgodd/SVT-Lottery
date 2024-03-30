@@ -1,70 +1,146 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-$font: 'Montserrat', sans serif;
-$green: #DBFC54;
-$green-deep: #9ABC0E;
-$white: #F1F1E9;
+$font: "Montserrat", sans serif;
+$green: #dbfc54;
+$green-deep: #9abc0e;
+$white: #f1f1e9;
 $black: #292929;
 
 @mixin button {
-    border: none;
-    padding: 10px;
-    border-radius: 16px;
-    background-color: $green;
-    font-weight: 600;
+  border: none;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: $green;
+  font-weight: 600;
 
-    &:hover {
-        background-color: $green-deep;
-    }
+  &:hover {
+    background-color: $green-deep;
+  }
 }
 
 @mixin button-transparent {
-    border: 1px solid white;
-        padding: 10px;
-        border-radius: 16px;
-        background-color: transparent;
-        color: white;
-        font-weight: 600;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: $font;
+  margin: 0;
+  padding: 0;
+  font-family: $font;
 
-    a {
-        text-decoration: none;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+#navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+    li {
+      margin: 0 5px;
+      border-radius: 10px;
+      padding: 5px;
+      align-items: center;
+
+      a {
         color: black;
+      }
+
+      a:hover {
+        color: $green;
+      }
     }
+  }
 }
 
 nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+  margin: 0px 30px;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo p {
+  margin: 0 20px;
+}
+
+.overlay {
+  /* Hidden by default */
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+.overlay {
+  a {
+    color: #f1f1f1;
+    text-decoration: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px;
+    flex-direction: column;
     font-size: 20px;
-    margin: 0px 30px;
-    
-    ul {
-        display: flex;
-        list-style: none;
-        margin-left: auto;
+    display: block; /* Display block to occupy entire width */
+    margin: 0 auto; /* Center content */
+    padding: 8px 16px;
+  }
 
-        li {
-            margin: 10px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    margin: 50px 0;
+  }
+}
 
-            a {
-                text-decoration: none;
-                color: $black;
+.overlay {
+  .closebtn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 48px;
+    cursor: pointer;
+    color: white;
+    padding: 15px 35px;
+  }
+}
 
-                &:hover {
-                    color: $green;
-                }
-            }
-        }
-    }
+#logo a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: $black;
+}
+
+#logo a:hover {
+  color: $green;
 }
 
 /*
@@ -72,277 +148,276 @@ HOMEPAGE Styling
 */
 
 section#welcome {
-    margin: 0 30px;
-    padding: 30px;
-    border-radius: 24px;
-    background-color: $black;
-    color: white;
+  margin: 0 30px;
+  padding: 30px;
+  border-radius: 24px;
+  background-color: $black;
+  color: white;
 
-    #welcome-container {
-        display: flex;
+  #welcome-container {
+    display: flex;
 
-        #welcome-text {
-            margin: 20px;
-            width: 50%;
+    #welcome-text {
+      margin: 20px;
+      width: 50%;
 
-            #welcome-text-header {
-                font-size: 60px;
+      #welcome-text-header {
+        font-size: 60px;
 
-                span {
-                    font-weight: 600;
-                }
-            }
-
-            #welcome-text-subtext {
-                margin-top: 10px;
-                font-size: 20px;
-            }
-
-            #connect-wallet {
-                @include button;
-                margin-top: 10px
-            }
-
-            #watch-video {
-                @include button-transparent;
-
-                img {
-                    width: 10px;
-                }
-            }
+        span {
+          font-weight: 600;
         }
+      }
 
-        #welcome-image {
-            width: 50%;
+      #welcome-text-subtext {
+        margin-top: 10px;
+        font-size: 20px;
+      }
 
-            img {
-                width: 100%;
-            }
+      #connect-wallet {
+        @include button;
+        margin-top: 10px;
+      }
+
+      #watch-video {
+        @include button-transparent;
+
+        img {
+          width: 10px;
         }
+      }
     }
+
+    #welcome-image {
+      width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 section#about {
-    margin: 20px;
-    padding: 30px;
+  margin: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #about-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    
-    #about-container {
-        display: flex;
-        align-items: center;
 
-        #about-image {
-            width: 50%;
-        }
-
-        #about-text {
-            width: 50%;
-
-            #about-text-header {
-                font-size: 60px;
-                font-weight: 600;  
-            }
-
-            #about-text-subtext {
-                margin-top: 10px;
-                font-size: 20px;
-            }
-
-            #ready-to-play-button {
-                @include button;
-                margin-top: 10px;
-            }
-        }
+    #about-image {
+      width: 50%;
     }
+
+    #about-text {
+      width: 50%;
+
+      #about-text-header {
+        font-size: 60px;
+        font-weight: 600;
+      }
+
+      #about-text-subtext {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+
+      #ready-to-play-button {
+        @include button;
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
 section#stake {
-    padding: 30px;
-    margin: 30px;
+  padding: 30px;
+  margin: 30px;
 
-    #stake-pretext {    
-        #stake-header-text {
-            font-size: 60px;
-            font-weight: 600;
-        }
-
-        #stake-header-subtext {
-            font-size: 20px;
-        }
+  #stake-pretext {
+    #stake-header-text {
+      font-size: 60px;
+      font-weight: 600;
     }
 
-    #stake-container {
-        display: flex;
-        margin-top: 20px;
-        justify-content: space-between;
-
-        #left-stake {
-            padding: 20px;
-            width: 44%;
-            border-radius: 24px;
-            background-color: $black;
-            color: white;
-
-            #stake-header-text {
-                font-size: 40px;
-                font-weight: 600;
-            }
-
-            #stake-header-subtext {
-                font-size: 20px;
-            }
-
-            #stake-button {
-                @include button;
-                margin-top: 10px;
-            }
-        }
-
-        #right-withdraw {
-            padding: 20px;
-            width: 44%;
-            border-radius: 24px;
-            background-color: $white;
-
-
-            #withdraw-header-text {
-                font-size: 40px;
-                font-weight: 600;
-            }
-
-            #withdraw-header-subtext {
-                font-size: 20px;
-            }
-
-            #withdraw-button {
-                @include button;
-                margin-top: 10px;
-            }
-        }
+    #stake-header-subtext {
+      font-size: 20px;
     }
+  }
+
+  #stake-container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+
+    #left-stake {
+      padding: 20px;
+      width: 44%;
+      border-radius: 24px;
+      background-color: $black;
+      color: white;
+
+      #stake-header-text {
+        font-size: 40px;
+        font-weight: 600;
+      }
+
+      #stake-header-subtext {
+        font-size: 20px;
+      }
+
+      #stake-button {
+        @include button;
+        margin-top: 10px;
+      }
+    }
+
+    #right-withdraw {
+      padding: 20px;
+      width: 44%;
+      border-radius: 24px;
+      background-color: $white;
+
+      #withdraw-header-text {
+        font-size: 40px;
+        font-weight: 600;
+      }
+
+      #withdraw-header-subtext {
+        font-size: 20px;
+      }
+
+      #withdraw-button {
+        @include button;
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
 section#claim {
-    #claim-container {
-        background-color: $black;
-        color: white;
-        padding: 20px;        
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  #claim-container {
+    background-color: $black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        #left-image {
-            img {
-                height: 100%;
-            }
-        }
-
-        #right-text {
-            margin: auto;
-            width: 40%;
-
-            #claim-header {
-                font-size: 60px;
-                font-weight: 600;
-
-                span {
-                    color: $green;
-                }
-            }
-
-            #claim-airdrop-button {
-                @include button;
-                margin-top: 10px;
-            }
-        }
+    #left-image {
+      img {
+        height: 100%;
+      }
     }
+
+    #right-text {
+      margin: auto;
+      width: 40%;
+
+      #claim-header {
+        font-size: 60px;
+        font-weight: 600;
+
+        span {
+          color: $green;
+        }
+      }
+
+      #claim-airdrop-button {
+        @include button;
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
 footer {
-    display: flex;
-    margin: 10px 100px;
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  margin: 10px 100px;
+  display: flex;
+  justify-content: space-between;
 
-    a {
-        text-decoration: none;
-        font-weight: 600;
-        color: black;
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
 
-        &:hover {
-            color: $green-deep;
-        }
+    &:hover {
+      color: $green-deep;
     }
+  }
 
-        #logo {
-            font-size: 40px;
-            font-weight: 600;
-        }
+  #logo {
+    font-size: 40px;
+    font-weight: 600;
+  }
 
-        #socials {
-            display: flex;
-            align-items: center;
-                        
-            ul {
-                display: flex;
-                align-items: center;
-                list-style-type: none;
+  #socials {
+    display: flex;
+    align-items: center;
 
-                li {
-                    margin: 0 5px;
-                }
-            }
-        }
+    ul {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+
+      li {
+        margin: 0 5px;
+      }
     }
+  }
+}
 
 /*
 AIRDROP PAGE STYLING
 */
 
 section#airdrop-page {
-    #airdrop-container {
-        padding: 30px;
-        margin: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  #airdrop-container {
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        #airdrop-image {
-            width: 50%;
+    #airdrop-image {
+      width: 50%;
 
-            img {
-                width: 100%;
-            }
-        }
-
-        #airdrop-text {
-            width: 50%;
-
-            #airdrop-text-header {
-                font-size: 60px;
-                font-weight: 600;
-            }
-
-            #airdrop-text-subtext {
-                margin-top: 10px;
-                font-size: 20px;
-            }
-
-            #claim-airdrop-button {
-                @include button;
-                margin-top: 10px;
-            }
-
-            #learn-more-button {
-                @include button-transparent;
-                margin-top: 10px;
-                border: 1px solid black;
-                color: black;
-            }
-        }
+      img {
+        width: 100%;
+      }
     }
+
+    #airdrop-text {
+      width: 50%;
+
+      #airdrop-text-header {
+        font-size: 60px;
+        font-weight: 600;
+      }
+
+      #airdrop-text-subtext {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+
+      #claim-airdrop-button {
+        @include button;
+        margin-top: 10px;
+      }
+
+      #learn-more-button {
+        @include button-transparent;
+        margin-top: 10px;
+        border: 1px solid black;
+        color: black;
+      }
+    }
+  }
 }
 
 /*
@@ -350,576 +425,587 @@ LOTTERY / STAKE PAGE STYLING
 */
 
 section#lottery-page {
-    #lottery-container {
-        padding: 30px;
-        margin: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  #lottery-container {
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        #lottery-image {
-            width: 50%;
+    #lottery-image {
+      width: 50%;
 
-            img {
-                width: 100%;
-            }
-        }
-
-        #lottery-text {
-            width: 40%;
-            margin-right: auto;
-
-            #lottery-text-header {
-                font-size: 60px;
-                font-weight: 600;
-            }
-
-            #lottery-text-subtext {
-                margin-top: 10px;
-                font-size: 20px;
-            }
-        }
+      img {
+        width: 100%;
+      }
     }
 
-    #lottery-forms {
-        background-color: $black;
-        color: white;
-        padding: 20px 100px;
+    #lottery-text {
+      width: 40%;
+      margin-right: auto;
 
-        #form-header {
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 30px;
-        }
+      #lottery-text-header {
+        font-size: 60px;
+        font-weight: 600;
+      }
 
-        #form-header-subtext {
-            margin-top: 5px;
-            color: $green;
-        }
-
-        #lottery-form {
-            display: flex;
-            
-            form {
-                input {
-                    padding: 10px 0;
-                    margin: 10px 0;
-                    border-radius: 10px;
-                    width: 300px;
-                    border: none;
-                }
-
-                button {
-                    @include button;
-                    margin-top: 10px;
-                    margin-left: 10px;
-                }
-            }
-        }
-
-        #see-result, #claim-result {
-            @include button;
-            margin-top: 10px;
-        }
+      #lottery-text-subtext {
+        margin-top: 10px;
+        font-size: 20px;
+      }
     }
+  }
+
+  #lottery-forms {
+    background-color: $black;
+    color: white;
+    padding: 20px 100px;
+
+    #form-header {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 30px;
+    }
+
+    #form-header-subtext {
+      margin-top: 5px;
+      color: $green;
+    }
+
+    #lottery-form {
+      display: flex;
+
+      form {
+        input {
+          padding: 10px 0;
+          margin: 10px 0;
+          border-radius: 10px;
+          width: 300px;
+          border: none;
+        }
+
+        button {
+          @include button;
+          margin-top: 10px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    #see-result,
+    #claim-result {
+      @include button;
+      margin-top: 10px;
+    }
+  }
 }
 
 @media screen and (min-width: 1025px) {
+  nav {
+    margin: 10px 200px;
+    font-size: 25px;
+  }
+
+  section#welcome {
+    margin: 5px 200px;
+    padding: 50px 100px;
+
+    #welcome-container {
+      display: flex;
+
+      #welcome-text {
+        #welcome-text-header {
+          font-size: 100px;
+        }
+
+        #welcome-text-subtext {
+          font-size: 30px;
+        }
+
+        #connect-wallet {
+          font-size: 20px;
+          margin: 10px 5px;
+        }
+
+        #watch-video {
+          font-size: 20px;
+          margin: 10px 5px;
+        }
+      }
+    }
+
+    #welcome-image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  section#about {
+    margin: 5px 200px;
+    padding: 50px 100px;
+
+    #about-container {
+      #about-image {
+        width: 40%;
+        margin-right: auto;
+        img {
+          width: 100%;
+        }
+      }
+
+      #about-text {
+        #about-text-header {
+          font-size: 100px;
+        }
+
+        #about-text-subtext {
+          font-size: 30px;
+        }
+
+        #ready-to-play-button {
+          font-size: 20px;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+  section#stake {
+    margin: 5px 200px;
+    padding: 50px 100px;
+
+    #stake-pretext {
+      #stake-header-text {
+        font-size: 100px;
+      }
+
+      #stake-header-subtext {
+        font-size: 30px;
+      }
+    }
+
+    #stake-container {
+      #left-stake {
+        padding: 30px;
+        width: 45%;
+
+        #stake-header-text {
+          font-size: 60px;
+        }
+
+        #stake-header-subtext {
+          font-size: 30px;
+        }
+
+        #stake-button {
+          font-size: 20px;
+          margin: 20px 0;
+        }
+      }
+
+      #right-withdraw {
+        padding: 30px;
+        width: 45%;
+
+        #withdraw-header-text {
+          font-size: 60px;
+        }
+
+        #withdraw-header-subtext {
+          font-size: 30px;
+        }
+
+        #withdraw-button {
+          font-size: 20px;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+  section#claim {
+    #claim-container {
+      padding: 30px 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #left-image {
+        img {
+          height: 100%;
+        }
+      }
+
+      #right-text {
+        #claim-header {
+          font-size: 100px;
+        }
+
+        #claim-airdrop-button {
+          font-size: 20px;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+  footer {
+    margin: 20px 400px;
+    font-size: 25px;
+
+    #logo {
+      font-size: 50px;
+    }
+
+    #socials {
+      ul {
+        li {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+
+  section#airdrop-page {
+    #airdrop-container {
+      padding: 50px 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #airdrop-image {
+        width: 40%;
+        img {
+          width: 100%;
+        }
+      }
+
+      #airdrop-text {
+        width: 40%;
+
+        #airdrop-text-header {
+          font-size: 100px;
+        }
+
+        #airdrop-text-subtext {
+          font-size: 30px;
+        }
+
+        #claim-airdrop-button {
+          font-size: 20px;
+          margin: 20px 0;
+        }
+
+        #learn-more-button {
+          font-size: 20px;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+  section#lottery-page {
+    #lottery-container {
+      padding: 50px 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #lottery-image {
+        width: 40%;
+        img {
+          width: 100%;
+        }
+      }
+
+      #lottery-text {
+        width: 40%;
+        margin-right: auto;
+
+        #lottery-text-header {
+          font-size: 100px;
+        }
+
+        #lottery-text-subtext {
+          font-size: 30px;
+        }
+      }
+    }
+
+    #lottery-forms {
+      padding: 30px 200px;
+
+      #form-header {
+        font-size: 30px;
+      }
+
+      #form-header-subtext {
+        font-size: 20px;
+      }
+
+      #lottery-form {
+        form {
+          input {
+            width: 400px;
+          }
+
+          button {
+            font-size: 20px;
+          }
+        }
+      }
+
+      #see-result,
+      #claim-result {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 370px) {
+  @media screen and (max-width: 800px) {
     nav {
-        margin: 10px 200px;
-        font-size: 25px;
+      text-align: center;
+      padding: 10px;
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+
+      #logo {
+        font-size: 20px;
+        margin: 5px 0;
+        font-weight: 600;
+
+        #openButton {
+          font-size: 30px;
+          align-items: center;
+        }
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+          margin: 5px;
+          font-weight: 500;
+          border-radius: 10px;
+          padding: 2px;
+          align-items: center;
+        }
+      }
+    }
+
+    #navigation {
+      display: none;
     }
 
     section#welcome {
-        margin: 5px 200px;
-        padding: 50px 100px;
+      #welcome-container {
+        flex-direction: column-reverse;
+        align-items: center;
 
-        #welcome-container {
-            display: flex;
+        #welcome-text {
+          width: 100%;
 
-            #welcome-text {
-                #welcome-text-header {
-                    font-size: 100px;
-                }
-
-                #welcome-text-subtext {
-                    font-size: 30px;
-                }
-
-                #connect-wallet {
-                    font-size: 20px;
-                    margin: 10px 5px;
-                }
-
-                #watch-video {
-                    font-size: 20px;
-                    margin: 10px 5px;
-                }
-            }
+          #welcome-text-header {
+            font-size: 40px;
+          }
         }
 
         #welcome-image {
-            img {
-                width: 100%;
-            }
+          width: 100%;
         }
+      }
     }
 
     section#about {
-        margin: 5px 200px;
-        padding: 50px 100px;
+      #about-container {
+        flex-direction: column;
+        margin: 10px;
 
-        #about-container {
-            #about-image {
-                width: 40%;
-                margin-right: auto;
-                img {
-                    width: 100%;
-                }
-            }
+        #about-image {
+          width: 100%;
 
-            #about-text {
-                #about-text-header {
-                    font-size: 100px;
-                }
-
-                #about-text-subtext {
-                    font-size: 30px;
-                }
-
-                #ready-to-play-button {
-                    font-size: 20px;
-                    margin: 20px 0;
-                }
-            }
+          img {
+            width: 90%;
+          }
         }
+
+        #about-text {
+          width: 100%;
+
+          #about-text-header {
+            font-size: 40px;
+          }
+        }
+      }
     }
 
     section#stake {
-        margin: 5px 200px;
-        padding: 50px 100px;
+      #stake-pretext {
+        #stake-header-text {
+          font-size: 40px;
+        }
+      }
 
-        #stake-pretext {
-            #stake-header-text {
-                font-size: 100px;
-            }
+      #stake-container {
+        flex-direction: column;
+        margin: 10px 20px 10px 0;
 
-            #stake-header-subtext {
-                font-size: 30px;
-            }
+        #left-stake {
+          width: 100%;
+          margin: 10px 0;
+
+          #stake-header-text {
+            font-size: 30px;
+          }
         }
 
-        #stake-container {
-            #left-stake {
-                padding: 30px;
-                width: 45%;
+        #right-withdraw {
+          width: 100%;
 
-                #stake-header-text {
-                    font-size: 60px;
-                }
-
-                #stake-header-subtext {
-                    font-size: 30px;
-                }
-
-                #stake-button {
-                    font-size: 20px;
-                    margin: 20px 0;
-                }
-            }
-
-            #right-withdraw {
-                padding: 30px;
-                width: 45%;
-
-                #withdraw-header-text {
-                    font-size: 60px;
-                }
-
-                #withdraw-header-subtext {
-                    font-size: 30px;
-                }
-
-                #withdraw-button {
-                    font-size: 20px;
-                    margin: 20px 0;
-                }
-            }
+          #withdraw-header-text {
+            font-size: 30px;
+          }
         }
+      }
     }
 
     section#claim {
-        #claim-container {
-            padding: 30px 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+      #claim-container {
+        flex-direction: column;
 
-            #left-image {
-                img {
-                    height: 100%;
-                }
-            }
-
-            #right-text {
-                #claim-header {
-                    font-size: 100px;
-                }
-
-                #claim-airdrop-button {
-                    font-size: 20px;
-                    margin: 20px 0;
-                }
-            }
+        #left-image {
+          img {
+            width: 100%;
+          }
         }
+
+        #right-text {
+          width: 100%;
+          text-align: center;
+
+          #claim-header {
+            font-size: 40px;
+          }
+        }
+      }
     }
 
     footer {
-        margin: 20px 400px;
-        font-size: 25px;
+      font-size: 18px;
+      margin: 10px auto;
+      padding: 5px 20px;
 
-        #logo {
-            font-size: 50px;
-        }
+      #logo {
+        font-size: 18px;
+        margin-left: 20px;
+      }
 
-        #socials {
-            ul {
-                li {
-                    margin: 0 10px;
-                }
+      #socials {
+        ul {
+          li {
+            margin: 0 5px;
+
+            a {
+              img {
+                width: 20px;
+              }
             }
+          }
         }
+      }
     }
 
     section#airdrop-page {
-        #airdrop-container {
-            padding: 50px 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+      #airdrop-container {
+        flex-direction: column-reverse;
+        margin-top: 0;
 
-            #airdrop-image {
-                width: 40%;
-                img {
-                    width: 100%;
-                }
-            }
+        #airdrop-image {
+          margin-top: 0;
+          width: 100%;
+          align-items: center;
 
-            #airdrop-text {
-                width: 40%;
-
-                #airdrop-text-header {
-                    font-size: 100px;
-                }
-
-                #airdrop-text-subtext {
-                    font-size: 30px;
-                }
-
-                #claim-airdrop-button {
-                    font-size: 20px;
-                    margin: 20px 0;
-                }
-
-                #learn-more-button {
-                    font-size: 20px;
-                    margin: 20px 0;
-                }
-            }
+          img {
+            width: 100%;
+            margin-bottom: 20px;
+          }
         }
+
+        #airdrop-text {
+          width: 100%;
+          margin: 5px 50px;
+
+          #airdrop-text-header {
+            text-align: center;
+          }
+
+          #airdrop-text-header {
+            font-size: 40px;
+          }
+        }
+      }
     }
 
     section#lottery-page {
-        #lottery-container {
-            padding: 50px 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+      #lottery-container {
+        flex-direction: column-reverse;
+        margin-top: 0;
 
-            #lottery-image {
-                width: 40%;
-                img {
-                    width: 100%;
-                }
-            }
+        #lottery-image {
+          margin-top: 0;
+          width: 100%;
+          align-items: center;
 
-            #lottery-text {
-                width: 40%;
-                margin-right: auto;
-
-                #lottery-text-header {
-                    font-size: 100px;
-                }
-
-                #lottery-text-subtext {
-                    font-size: 30px;
-                }
-            }
+          img {
+            width: 100%;
+            margin-bottom: 20px;
+          }
         }
 
-        #lottery-forms {
-            padding: 30px 200px;
+        #lottery-text {
+          width: 100%;
+          margin: 5px 50px;
 
-            #form-header {
-                font-size: 30px;
-            }
-
-            #form-header-subtext {
-                font-size: 20px;
-            }
-
-            #lottery-form {
-                form {
-                    input {
-                        width: 400px;
-                    }
-
-                    button {
-                        font-size: 20px;
-                    }
-                }
-            }
-
-            #see-result, #claim-result {
-                font-size: 20px;
-            }
+          #lottery-text-header {
+            font-size: 40px;
+          }
         }
+      }
+
+      #lottery-forms {
+        padding: 20px 25px;
+
+        #form-header {
+          font-size: 20px;
+        }
+
+        #form-header-subtext {
+          font-size: 15px;
+        }
+
+        #lottery-form {
+          form {
+            input {
+              width: 200px;
+            }
+
+            button {
+              font-size: 15px;
+            }
+          }
+        }
+
+        #see-result,
+        #claim-result {
+          font-size: 15px;
+        }
+      }
     }
-} 
-
-@media screen and (min-width: 370px) {
-    @media screen and (max-width: 800px) {
-        nav {
-            text-align: center;
-            padding: 10px;
-            font-size: 15px;
-            display: flex;
-            flex-direction: column;
-
-            #logo {
-                font-size: 20px;
-                margin: 5px 0;
-                font-weight: 600;
-            }
-
-            ul {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                li {
-                    margin: 5px;
-                    font-weight: 500;
-                    border-radius: 10px;
-                    padding: 2px;
-                    align-items: center;
-                }
-            }
-        }
-
-        section#welcome {
-            #welcome-container {
-                flex-direction: column-reverse;
-                align-items: center;
-
-                #welcome-text {
-                    width: 100%;
-                    
-                    #welcome-text-header {
-                        font-size: 40px;
-                    }
-                }
-
-                #welcome-image {
-                    width: 100%;
-                }
-            }
-        }
-
-        section#about {
-            #about-container {
-                flex-direction: column;
-                margin: 10px;
-
-                #about-image {
-                    width: 100%;
-
-                    img {
-                        width: 90%;
-                    }
-                }
-
-                #about-text {
-                    width: 100%;
-
-                    #about-text-header {
-                        font-size: 40px;
-                    }
-                }
-            }
-        }
-
-        section#stake {
-            #stake-pretext {
-                #stake-header-text {
-                    font-size: 40px;
-                }
-            }
-
-            #stake-container {
-                flex-direction: column;
-                margin: 10px 20px 10px 0;
-
-                #left-stake {
-                    width: 100%;
-                    margin: 10px 0;
-
-                    #stake-header-text {
-                        font-size: 30px;
-                    }
-                }
-
-                #right-withdraw {
-                    width: 100%;
-
-                    #withdraw-header-text {
-                        font-size: 30px;
-                    }
-                }
-            }
-        }
-
-        section#claim {
-            #claim-container {
-                flex-direction: column;
-
-                #left-image {
-                    img {
-                        width: 100%;
-                    }
-                }
-
-                #right-text {
-                    width: 100%;
-                    text-align: center;
-
-                    #claim-header {
-                        font-size: 40px;
-                    }
-                }
-            }
-        }
-
-        footer {
-            font-size: 18px;
-            margin: 10px auto;
-            padding: 5px 20px;
-
-            #logo {
-                font-size: 18px;
-                margin-left: 20px;
-            }
-
-            #socials {
-                ul {
-                    li {
-                        margin: 0 5px;
-
-                        a {
-                            img {
-                                width: 20px;
-                            }
-                        }
-
-                    }
-                }
-            }
-        }
-
-        section#airdrop-page {
-            #airdrop-container {
-                flex-direction: column-reverse;
-                margin-top: 0;
-
-                #airdrop-image {
-                    margin-top: 0;
-                    width: 100%;
-                    align-items: center;
-
-                    img {
-                        width: 100%;
-                        margin-bottom: 20px;
-                    }
-                }
-
-                #airdrop-text {
-                    width: 100%;
-                    margin: 5px 50px;
-
-                    #airdrop-text-header {
-                        text-align: center;
-                    }
-
-                    #airdrop-text-header {
-                        font-size: 40px;
-                    }
-                }
-            }
-        }
-
-        section#lottery-page {
-            #lottery-container {
-                flex-direction: column-reverse;
-                margin-top: 0;
-
-                #lottery-image {
-                    margin-top: 0;
-                    width: 100%;
-                    align-items: center;
-
-                    img {
-                        width: 100%;
-                        margin-bottom: 20px;
-                    }
-                }
-
-                #lottery-text {
-                    width: 100%;
-                    margin: 5px 50px;
-
-                    #lottery-text-header {
-                        font-size: 40px;
-                    }
-                }
-            }
-
-            #lottery-forms {
-                padding: 20px 25px;
-
-                #form-header {
-                    font-size: 20px;
-                }
-
-                #form-header-subtext {
-                    font-size: 15px;
-                }
-
-                #lottery-form {
-                    form {
-                        input {
-                            width: 200px;
-                        }
-
-                        button {
-                            font-size: 15px;
-                        }
-                    }
-                }
-
-                #see-result, #claim-result {
-                    font-size: 15px;
-                }
-            }
-        }
-    }
+  }
 }

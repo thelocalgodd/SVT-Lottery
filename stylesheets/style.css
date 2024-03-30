@@ -9,6 +9,30 @@
   color: black;
 }
 
+#navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+#navigation ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+#navigation ul li {
+  margin: 0 5px;
+  border-radius: 10px;
+  padding: 5px;
+  align-items: center;
+}
+#navigation ul li a {
+  color: black;
+}
+#navigation ul li a:hover {
+  color: #dbfc54;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -17,20 +41,68 @@ nav {
   font-size: 20px;
   margin: 0px 30px;
 }
-nav ul {
+
+#logo {
   display: flex;
-  list-style: none;
-  margin-left: auto;
+  align-items: center;
 }
-nav ul li {
-  margin: 10px;
+
+#logo p {
+  margin: 0 20px;
 }
-nav ul li a {
+
+.overlay {
+  /* Hidden by default */
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+.overlay a {
+  color: #f1f1f1;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  display: block; /* Display block to occupy entire width */
+  margin: 0 auto; /* Center content */
+  padding: 8px 16px;
+}
+.overlay ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  margin: 50px 0;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 48px;
+  cursor: pointer;
+  color: white;
+  padding: 15px 35px;
+}
+
+#logo a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
   color: #292929;
 }
-nav ul li a:hover {
-  color: #DBFC54;
+
+#logo a:hover {
+  color: #dbfc54;
 }
 
 /*
@@ -64,12 +136,12 @@ section#welcome #welcome-container #welcome-text #connect-wallet {
   border: none;
   padding: 10px;
   border-radius: 16px;
-  background-color: #DBFC54;
+  background-color: #dbfc54;
   font-weight: 600;
   margin-top: 10px;
 }
 section#welcome #welcome-container #welcome-text #connect-wallet:hover {
-  background-color: #9ABC0E;
+  background-color: #9abc0e;
 }
 section#welcome #welcome-container #welcome-text #watch-video {
   border: 1px solid white;
@@ -118,12 +190,12 @@ section#about #about-container #about-text #ready-to-play-button {
   border: none;
   padding: 10px;
   border-radius: 16px;
-  background-color: #DBFC54;
+  background-color: #dbfc54;
   font-weight: 600;
   margin-top: 10px;
 }
 section#about #about-container #about-text #ready-to-play-button:hover {
-  background-color: #9ABC0E;
+  background-color: #9abc0e;
 }
 
 section#stake {
@@ -160,18 +232,18 @@ section#stake #stake-container #left-stake #stake-button {
   border: none;
   padding: 10px;
   border-radius: 16px;
-  background-color: #DBFC54;
+  background-color: #dbfc54;
   font-weight: 600;
   margin-top: 10px;
 }
 section#stake #stake-container #left-stake #stake-button:hover {
-  background-color: #9ABC0E;
+  background-color: #9abc0e;
 }
 section#stake #stake-container #right-withdraw {
   padding: 20px;
   width: 44%;
   border-radius: 24px;
-  background-color: #F1F1E9;
+  background-color: #f1f1e9;
 }
 section#stake #stake-container #right-withdraw #withdraw-header-text {
   font-size: 40px;
@@ -184,12 +256,12 @@ section#stake #stake-container #right-withdraw #withdraw-button {
   border: none;
   padding: 10px;
   border-radius: 16px;
-  background-color: #DBFC54;
+  background-color: #dbfc54;
   font-weight: 600;
   margin-top: 10px;
 }
 section#stake #stake-container #right-withdraw #withdraw-button:hover {
-  background-color: #9ABC0E;
+  background-color: #9abc0e;
 }
 
 section#claim #claim-container {
@@ -212,18 +284,18 @@ section#claim #claim-container #right-text #claim-header {
   font-weight: 600;
 }
 section#claim #claim-container #right-text #claim-header span {
-  color: #DBFC54;
+  color: #dbfc54;
 }
 section#claim #claim-container #right-text #claim-airdrop-button {
   border: none;
   padding: 10px;
   border-radius: 16px;
-  background-color: #DBFC54;
+  background-color: #dbfc54;
   font-weight: 600;
   margin-top: 10px;
 }
 section#claim #claim-container #right-text #claim-airdrop-button:hover {
-  background-color: #9ABC0E;
+  background-color: #9abc0e;
 }
 
 footer {
@@ -238,7 +310,7 @@ footer a {
   color: black;
 }
 footer a:hover {
-  color: #9ABC0E;
+  color: #9abc0e;
 }
 footer #logo {
   font-size: 40px;
@@ -288,12 +360,12 @@ section#airdrop-page #airdrop-container #airdrop-text #claim-airdrop-button {
   border: none;
   padding: 10px;
   border-radius: 16px;
-  background-color: #DBFC54;
+  background-color: #dbfc54;
   font-weight: 600;
   margin-top: 10px;
 }
 section#airdrop-page #airdrop-container #airdrop-text #claim-airdrop-button:hover {
-  background-color: #9ABC0E;
+  background-color: #9abc0e;
 }
 section#airdrop-page #airdrop-container #airdrop-text #learn-more-button {
   border: 1px solid white;
@@ -347,7 +419,7 @@ section#lottery-page #lottery-forms #form-header {
 }
 section#lottery-page #lottery-forms #form-header-subtext {
   margin-top: 5px;
-  color: #DBFC54;
+  color: #dbfc54;
 }
 section#lottery-page #lottery-forms #lottery-form {
   display: flex;
@@ -363,24 +435,26 @@ section#lottery-page #lottery-forms #lottery-form form button {
   border: none;
   padding: 10px;
   border-radius: 16px;
-  background-color: #DBFC54;
+  background-color: #dbfc54;
   font-weight: 600;
   margin-top: 10px;
   margin-left: 10px;
 }
 section#lottery-page #lottery-forms #lottery-form form button:hover {
-  background-color: #9ABC0E;
+  background-color: #9abc0e;
 }
-section#lottery-page #lottery-forms #see-result, section#lottery-page #lottery-forms #claim-result {
+section#lottery-page #lottery-forms #see-result,
+section#lottery-page #lottery-forms #claim-result {
   border: none;
   padding: 10px;
   border-radius: 16px;
-  background-color: #DBFC54;
+  background-color: #dbfc54;
   font-weight: 600;
   margin-top: 10px;
 }
-section#lottery-page #lottery-forms #see-result:hover, section#lottery-page #lottery-forms #claim-result:hover {
-  background-color: #9ABC0E;
+section#lottery-page #lottery-forms #see-result:hover,
+section#lottery-page #lottery-forms #claim-result:hover {
+  background-color: #9abc0e;
 }
 
 @media screen and (min-width: 1025px) {
@@ -563,7 +637,8 @@ section#lottery-page #lottery-forms #see-result:hover, section#lottery-page #lot
   section#lottery-page #lottery-forms #lottery-form form button {
     font-size: 20px;
   }
-  section#lottery-page #lottery-forms #see-result, section#lottery-page #lottery-forms #claim-result {
+  section#lottery-page #lottery-forms #see-result,
+  section#lottery-page #lottery-forms #claim-result {
     font-size: 20px;
   }
 }
@@ -580,6 +655,10 @@ section#lottery-page #lottery-forms #see-result:hover, section#lottery-page #lot
     margin: 5px 0;
     font-weight: 600;
   }
+  nav #logo #openButton {
+    font-size: 30px;
+    align-items: center;
+  }
   nav ul {
     display: flex;
     align-items: center;
@@ -591,6 +670,9 @@ section#lottery-page #lottery-forms #see-result:hover, section#lottery-page #lot
     border-radius: 10px;
     padding: 2px;
     align-items: center;
+  }
+  #navigation {
+    display: none;
   }
   section#welcome #welcome-container {
     flex-direction: column-reverse;
@@ -727,7 +809,8 @@ section#lottery-page #lottery-forms #see-result:hover, section#lottery-page #lot
   section#lottery-page #lottery-forms #lottery-form form button {
     font-size: 15px;
   }
-  section#lottery-page #lottery-forms #see-result, section#lottery-page #lottery-forms #claim-result {
+  section#lottery-page #lottery-forms #see-result,
+  section#lottery-page #lottery-forms #claim-result {
     font-size: 15px;
   }
 }
